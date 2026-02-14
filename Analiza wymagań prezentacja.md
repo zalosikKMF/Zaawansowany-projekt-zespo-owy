@@ -146,5 +146,6 @@ System będzie rozwijany i rozszerzany o nowe funkcjonalności, takie jak:
 ## 8. Diagram przypadków użycia
 
 ![Use Case Diagram](diagrams/use_case.png)
-
+## 9. Diagram aktywności
 ![Activity Diagram](diagrams/activity.png)
+## 10. Diagram klas
