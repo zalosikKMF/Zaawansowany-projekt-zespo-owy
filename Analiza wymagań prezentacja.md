@@ -149,3 +149,4 @@ System będzie rozwijany i rozszerzany o nowe funkcjonalności, takie jak:
 ## 9. Diagram aktywności
 ![Activity Diagram](diagrams/activity.png)
 ## 10. Diagram klas
+![Class Diagram](diagrams/class.png)
