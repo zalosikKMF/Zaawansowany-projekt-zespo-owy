@@ -140,3 +140,10 @@ System będzie rozwijany i rozszerzany o nowe funkcjonalności, takie jak:
 - wykorzystanie algorytmów predykcyjnych do prognozowania poziomu zanieczyszczeń,
 - integracja z systemami Smart City,
 - migracja do chmury obliczeniowej w celu zwiększenia dostępności, skalowalności i redukcji kosztów utrzymania.
+
+---
+
+## 8. Model przypadków użycia
+## Diagram przypadków użycia
+
+![Use Case Diagram](diagrams/use_case.png)
