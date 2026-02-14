@@ -1,0 +1,120 @@
+Projekt: SMJP – System monitorowania jakości powietrza / ClearAir
+
+Data: 16.11.2025
+Wersja: 1.2
+
+1. Interesariusze projektu
+
+          Interesariusz                               	        Opis roli	                                             Charakter interesu
+
+Prowadzący (mgr Wojciech Moniuszko)	                   Nadzór merytoryczny nad projektem	              Oczekuje zgodności z wymaganiami dydaktycznymi, 
+                                                                                                         kompletnej dokumentacji i działania aplikacji.
+
+Zespół projektowy (Wądołowski, Wawer, Saran)	        Projekt, implementacja i dokumentacja	                     Chcą wykonać projekt na czas, 
+                                                                                                             w dobrej jakości i otrzymać dobrą ocenę.
+
+Użytkownicy końcowi (mieszkańcy)	                       Oglądają dane jakości powietrza	                     Potrzebują szybkiego, prostego i 
+                                                                                                             czytelnego podglądu stanu powietrza.
+
+Samorządy / instytucje środowiskowe	                    Analiza danych o jakości powietrza	             Potrzebują wiarygodnych danych, wykresów i map.
+
+Społeczności ekologiczne	                              Edukacja i informowanie mieszkańców	                   Potrzebują narzędzia zwiększającego
+                                                                                                                      świadomość ekologiczną.
+
+Zewnętrzne API	                                                  Dostawca danych	                            Oczekuje prawidłowego korzystania z API.
+
+
+
+2. Potrzeby interesariuszy – zestawienie
+
+2.1. Prowadzący projektu
+
+Projekt musi być zgodny z kartą projektu.
+
+Dokumentacja musi być kompletna (wymagania, testy, instrukcja uruchomienia).
+
+Projekt musi działać i dać się uruchomić lokalnie.
+
+Musi powstać prezentacja i raport końcowy.
+
+Harmonogram ma zostać dotrzymany.
+
+Kod ma być poprawny, czytelny i w repozytorium GitHub.
+
+
+
+2.3. Użytkownicy końcowi (mieszkańcy)
+
+Szybki dostęp do aktualnych danych o jakości powietrza.
+
+Prosta, intuicyjna aplikacja.
+
+Czytelna mapa z oznaczeniem czujników.
+
+Wykresy/wyświetlanie PM2.5, PM10, temperatury.
+
+Powiadomienie wizualne, gdy powietrze jest złej jakości.
+
+Brak konieczności logowania.
+
+Działanie na urządzeniach mobilnych.
+
+
+
+2.4. Samorządy i instytucje środowiskowe
+
+Wiarygodne dane z czujników IoT.
+
+Dostęp do historii pomiarów w bazie danych.
+
+Możliwość wykorzystania danych do analiz lokalnych.
+
+Stabilność i aktualność danych.
+
+Eksport danych (CSV/JSON – opcjonalnie).
+
+Przejrzyste statystyki i wykresy.
+
+
+
+2.5. Organizacje ekologiczne i społeczne
+
+Narzędzie edukacyjne do popularyzacji wiedzy o jakości powietrza.
+
+Możliwość udostępniania mapy (link publiczny).
+
+Czytelna wizualizacja zmian w czasie.
+
+Materiały, które łatwo pokazać na zajęciach / prezentacjach.
+
+
+
+2.6. Zewnętrzne API
+
+Przestrzeganie limitów zapytań API.
+
+Prawidłowe komunikowanie błędów (np. brak danych).
+
+Odpowiednia interpretacja i prezentacja danych.
+
+Brak nadmiernego obciążenia API (update co 10 s jest OK).
+
+
+
+3. Priorytetyzacja potrzeb
+
+             Priorytet                                    	Potrzeby
+
+              Musi być	                    Aktualne dane z API, mapa czujników, prezentacja PM2.5/PM10/temperatury,
+                                                   dokumentacja, repozytorium, działająca aplikacja webowa.
+
+            Powinno być	                   Wykresy zmian w czasie, podstawowa historia danych, responsywność aplikacji.
+
+              Może być	                          Panel filtrowania czujników, eksport danych, tryb ciemny.
+
+            Nie na teraz	                   Aplikacja mobilna, integracja z innymi API, system powiadomień SMS/Push.
+
+
+
+
+

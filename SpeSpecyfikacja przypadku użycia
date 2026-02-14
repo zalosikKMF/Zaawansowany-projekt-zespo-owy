@@ -1,0 +1,82 @@
+Specyfikacje przypadków użycia:
+1.Przeglądanie mapy jakości powietrza
+
+Poziom: średni
+Aktor: Użytkownik 
+Warunki początkowe: Użytkownik ma dostęp do systemu
+Wywołanie: Użytkownik wybiera opcję „Mapa jakości powietrza”
+
+Przebieg przypadku użycia:
+
+- Użytkownik otwiera mapę.
+
+- System pobiera listę aktywnych stacji.
+
+- System wyświetla mapę z ikonami stacji.
+
+- Użytkownik wybiera konkretną stację.
+
+- System wyświetla szczegóły odczytów (PM2.5, PM10,).
+
+- Użytkownik może zobaczyć krótki opis trendu (np. „jakość pogarsza się”).
+
+Rozszerzenia:
+
+Stacja offline - System oznacza ją ikoną „brak danych”.
+
+Brak internetu - System wyświetla komunikat błędu.
+
+Opóźnienie serwera - System informuje o ładowaniu danych
+
+
+2. Wyświetlanie wykresów i statystyk
+
+Poziom: średni
+Aktor: Użytkownik 
+Warunki początkowe: Użytkownik wybrał stację z mapy
+Wywołanie: Użytkownik klika „Historia odczytów / Wykresy”
+
+Przebieg przypadku użycia:
+
+-Użytkownik otwiera panel „Wykresy i statystyki”.
+
+-System prezentuje listę dostępnych parametrów (PM2.5, PM10).
+
+-Użytkownik wybiera przedział czasu (24h, 7 dni, X dni).
+
+-System pobiera dane archiwalne z bazy.
+
+-System generuje wykres liniowy i statystyki (średnia, minimum, maksimum).
+
+Użytkownik może pobrać dane jako CSV.
+
+Rozszerzenia:
+- Brak danych dla wybranego przedziału → System wyświetla komunikat informacyjny.
+- Zbyt dużo danych - System proponuje zawężenie przedziału.
+
+3. Otrzymywanie alertów o przekroczeniach norm
+
+Poziom: niski
+Aktor: Użytkownik 
+Warunki początkowe: Użytkownik ma konto i jest zalogowany
+Wywołanie: Użytkownik aktywuje alerty w ustawieniach
+
+Przebieg przypadku użycia:
+
+- Użytkownik przechodzi do ustawień alertów.
+
+- System wyświetla dostępne typy alertów (PM2.5, PM10, NO₂ itd.).
+
+- Użytkownik wybiera parametry, które chce monitorować.
+
+- Użytkownik ustawia progi alarmowe (np. PM2.5 > 60 µg/m^3).
+
+- System zapisuje konfigurację alertów.
+
+- System monitoruje bieżące wartości i w razie przekroczenia:
+
+- wysyła powiadomienie e-mail lub push.
+
+Rozszerzenia:
+
+Brak bieżących danych - System opóźnia alert i informuje użytkownika.

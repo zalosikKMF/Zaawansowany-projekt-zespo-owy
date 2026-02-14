@@ -1,0 +1,123 @@
+1. Informacje ogólne
+
+Tytuł projektu:
+System monitorowania jakości powietrza|Platforma wizualizująca dane ze stacji czujników IoT z mapą i statystykami.
+
+Akronim projektu:
+SMJP
+
+Data utworzenia: 19.10.2025
+Wersja dokumentu: 1.0
+Zespół projektowy: Karol Wądołowski , Mateusz Wawer , Piotr Saran
+
+Imię i nazwisko|Rola w projekcie|Zakres odpowiedzialności
+----------------|------------------------------------------------|----------------------------------------------
+Karol Wądołowski|Kierownik projektu|Planowanie, koordynacja, raportowanie postępów
+Mateusz Wawer|Analityk systemowy|Analiza wymagań, tworzenie przypadków użycia, diagramów UML
+Piotr Saran Developer / Programista|Tworzy kod źródłowy aplikacji. Może specjalizować się w frontendzie, backendzie lub obu (full-stack).
+
+Prowadzący: mgr Wojciech Moniuszko
+Jednostka dydaktyczna: ??
+
+2. Cel projektu
+
+Celem projektu ClearAir jest dostarczenie aplikacji weboej do śledzenia zmian pomiarów jakości powietrza w tym:
+- Stworzenie systemu do monitorowania jakości powietrza w czasie rzeczywistym – umożliwiającego zbieranie, przetwarzanie i prezentowanie danych z czujników IoT.
+- Dostarczanie wiarygodnych danych dla mieszkańców, władz samorządowych i instytucji środowiskowych.
+
+3. Uzasadnienie projektu
+
+- Dostarczenie rozwiązania dla osób zainteresowanych oraz instytucji samorządowych oraz pozarządowych:
+
+
+Projekt ma na celu zachęcić ludzi żebyśmy dbali o naszą przyszłość poprzez zadbanie o czystość naszego otoczenia, 
+wykożystywanie odpowiednich produktów, nie śmiecenie, wymianę filtrów na czas w zakładach produkcyjnych  
+
+4. Zakres projektu
+
+W zakresie projektu:
+
+- Projektowanie struktury systemu, dobór technologii
+- Zaprojektowanie aplikacji webowej 
+- Pobranie pomiarów za pomocą publicznego API z projektu opensource sensor.community
+- Utworzenie relacyjnej bazy danych ( PostgressSQL ).
+- Stworzenie dokumentacji projektowej i technicznej.
+- Przeprowadzenie testów i prezentacji projektu.
+
+
+5. Wymagania 
+
+Typ | Opis
+---------------------------|-----------------------------------------------------------------------------------
+Funkcjonalne|Prezentacja pomiarów wyników z czujników IoT w aplikacji webowej , przedstawienie danych odnośnie stanu pyłków PM2.5, PM10 , temperatura 
+Niefunkcjonalne|Wydajność: Przejrzystość wyświtlanych danych , aktualizacja stanu czujników co 10sec 
+Interfejsowe|Przeglądarkowy interfejs webowy w technologii HTML5/CSS3.
+
+6. Zespół projektowy i role
+
+Rola|Osoba|Odpowiedzialność
+--------------|-------------------------|-----------------------------------------------------------------------
+Kierownik projektu|Mateusz Wawer|Harmonogram, raporty, koordynacja
+Programista|Piotr Saran|Backend, baza danych
+Dokumentalista|Karol Wądołowski|Dokumentacja, raporty, prezentacja
+
+7. Zasoby i narzędzia
+
+Kategoria|Narzędzie / Technologia|Cel zastosowania
+-----------------|-----------------------------------|----------------------------------------------------------
+Zarządzanie projektem|Discord|Planowanie sprintów, śledzenie zadań
+Repozytorium|GitHub|Kontrola wersji kodu
+Analiza i projektowanie|Miro|Diagramy UML, mapa procesu
+Programowanie|Python html / css|Implementacja aplikacji
+Baza danych|SQLite|Przechowywanie danych o pomiarach
+Dokumentacja|Word|Tworzenie dokumentacji technicznej
+Komunikacja|Discord|Spotkania zespołowe
+
+8. Harmonogram realizacji (5 spotkań)
+
+Etap|Zakres|Czas realizacji|Rezultat
+---|----------------------------------------------------|----------------|--------------------------------------
+1|Tworzenie zespołów, wybór tematu, karta projektu|Tydzień 1|Karta projektu, struktura zespołu
+2|Analiza wymagań|Tydzień 2|Dokument wymagań
+3|Dokumentacja projektowa (I etap)|Tydzień 3|Projekt dokumentu
+4|Implementacja prototypu (I etap)|Tydzień 4|Pierwsza wersja aplikacji
+5|Testowanie i poprawki|Tydzień 5|Raport testów
+
+9. Analiza ryzyka
+
+Nr|Ryzyko|Prawdopodobieństwo|Skutek|Działanie zapobiegawcze
+--|---------------------------|-----------|-----------------------------------|---------------------------------
+1|Opóźnienia w pracy zespołu|Średnie|Wysoki|Spotkania tygodniowe
+2|Brak doświadczenia w programowaniu z wykorzystaniem API |Wysokie|Średni|Mini-szkolenie i wykorzystanie AI
+3|Konflikty w zespole|Niskie|Średni|Jasny podział ról, komunikacja na Discord
+4|Utrata danych|Niskie|Wysoki|Regularne kopie w GitHub
+5|Niedostarczenie dokumentacji|Niskie|Wysoki|Wczesne rozpoczęcie redakcji przez dokumentalistę
+
+10. Kryteria sukcesu projektu
+
+- Wszystkie wymagania funkcjonalne zostały zaimplementowane.
+- Aplikacja uruchamia się lokalnie i działa poprawnie.
+- Testy  zakończone wynikiem pozytywnym.
+- Zespół zrealizował projekt w wyznaczonym czasie.
+- Projekt został pozytywnie oceniony przez prowadzącego.
+
+11. Rezultaty projektu
+
+- Prototyp aplikacji webowej (ClearAir).
+- Dokumentacja projektowa (wymagania, UML, testy).
+- Dokumentacja techniczna (instrukcja uruchomienia).
+- Prezentacja zespołowa (PowerPoint / PDF).
+- Raport końcowy i protokół zdawczo-odbiorczy.
+
+12. Akceptacja projektu
+
+Funkcja|Imię i nazwisko|Data|Podpis
+------------|-------------------------------|--------------|----------------------------------|
+Kierownik projektu|Karol Wądołowski|19.10.2025|___________
+Prowadzący|mgr Wojciech Moniuszko|19.10.2025|___________
+
+## Uwagi końcowe:
+
+- Dokument powinien być przechowywany w repozytorium projektu.
+- Aktualizacja wersji dokumentu wymaga zgody kierownika projektu i prowadzącego.
+- Każdy członek zespołu ma obowiązek zapoznać się z treścią karty i ją zaakceptować.
