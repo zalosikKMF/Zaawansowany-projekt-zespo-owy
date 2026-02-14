@@ -54,7 +54,7 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 ---
 
-## 4. Wymagania funkcjonalne i nie funkcjonalne
+## 4. Wymagania funkcjonalne i niefunkcjonalne
 ## 4.1 Wymagania funkcjonalne
 ### Dla administratora systemu:
 
