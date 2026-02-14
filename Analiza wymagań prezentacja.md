@@ -36,9 +36,21 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 ---
 
-## 3. Harmonogram prac
+## 3. Harmonogram prac – System monitorowania jakości powietrza
 
-*(Tu możesz wstawić tabelę lub listę z planem etapów realizacji projektu, np. analiza, implementacja, testy, wdrożenie)*
+| Nr | Zadanie | Czas trwania | Data rozpoczęcia | Data zakończenia | Opis | Odpowiedzialni |
+|----|---------|--------------|-----------------|-----------------|------|----------------|
+| 1 | Analiza wymagań | 5 dni | 01.08.2022 | 05.08.2022 | Zebranie wymagań funkcjonalnych i niefunkcjonalnych systemu monitorowania jakości powietrza | Analityk |
+| 2 | Projekt architektury systemu | 7 dni | 06.08.2022 | 12.08.2022 | Projekt struktury systemu: warstwa IoT, baza danych, backend, frontend | Analityk, programiści |
+| 3 | Projektowanie baz danych | 12 dni | 13.08.2022 | 24.08.2022 | Projekt logiczny i fizyczny bazy danych do przechowywania danych z czujników, alertów i statystyk | Analityk, programiści |
+| 4 | Implementacja baz danych | 7 dni | 25.08.2022 | 31.08.2022 | Tworzenie schematów baz danych, tabel i relacji oraz integracja z backendem | Programiści |
+| 5 | Implementacja backendu i API | 10 dni | 01.09.2022 | 12.09.2022 | Programowanie logiki systemu, pobieranie danych z czujników IoT, generowanie alertów, przygotowanie API dla frontendu | Programiści |
+| 6 | Implementacja frontendu i wizualizacji | 8 dni | 13.09.2022 | 22.09.2022 | Tworzenie panelu użytkownika, mapy jakości powietrza, wykresów historycznych i statystyk | Programiści, UI/UX |
+| 7 | Testy systemu | 4 dni | 23.09.2022 | 28.09.2022 | Testowanie poprawności działania systemu, poprawność danych, działanie alertów, testy wydajności | Testerzy, programiści |
+| 8 | Przygotowanie dokumentacji | 2 dni | 29.09.2022 | 30.09.2022 | Opracowanie dokumentacji użytkownika i technicznej | Analityk |
+| 9 | Odbiór systemu | 1 dzień | 01.10.2022 | 01.10.2022 | Formalne zatwierdzenie gotowego systemu przez kierownika projektu | Kierownik |
+| 10 | Wdrożenie systemu | 2 dni | 02.10.2022 | 03.10.2022 | Instalacja systemu w środowisku produkcyjnym, konfiguracja stacji pomiarowych i czujników IoT | Administrator, Programiści |
+
 
 ---
 
