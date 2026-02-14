@@ -144,6 +144,5 @@ System będzie rozwijany i rozszerzany o nowe funkcjonalności, takie jak:
 ---
 
 ## 8. Diagram przypadków użycia
-## Diagram przypadków użycia
 
 ![Use Case Diagram](diagrams/use_case.png)
