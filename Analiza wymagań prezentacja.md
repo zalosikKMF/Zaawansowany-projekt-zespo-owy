@@ -11,7 +11,7 @@ Data opracowania: 10.02.2026
 
 System monitorowania jakości powietrza to platforma umożliwiająca zbieranie, przetwarzanie, analizę i wizualizację danych środowiskowych pochodzących z sieci czujników IoT rozmieszczonych na danym obszarze (np. miasto, region lub kraj). System umożliwia bieżące monitorowanie parametrów jakości powietrza, wspiera procesy decyzyjne jednostek administracyjnych oraz zapewnia dostęp do danych historycznych w celu prowadzenia analiz trendów i oceny zmian środowiskowych w czasie.
 
-#2.1 Cel dokumentu
+2.1 Cel dokumentu
 Celem niniejszego dokumentu jest:
 
 - określenie wymagań funkcjonalnych i niefunkcjonalnych systemu,
