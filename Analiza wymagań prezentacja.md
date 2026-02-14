@@ -54,8 +54,8 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 ---
 
-## 4. Wymagania funkcjonalne
-
+## 4. Wymagania funkcjonalne i nie funkcjonalne
+## 4.1 Wymagania funkcjonalne
 ### Dla administratora systemu:
 
 - Dodawanie, edytowanie i usuwanie stacji pomiarowych oraz czujników.
@@ -85,7 +85,7 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 ---
 
-## 3.1 Wymagania niefunkcjonalne
+## 4.2 Wymagania niefunkcjonalne
 
 - System powinien być dostępny 24/7 z minimalnymi przerwami serwisowymi (w godzinach nocnych).
 - System powinien być skalowalny (możliwość dodawania nowych stacji bez utraty wydajności).
@@ -94,7 +94,7 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 ---
 
-## 4. Wymagania interfejsowe
+## 5. Wymagania interfejsowe
 
 - Interfejs w języku polskim.
 - Interfejs użytkownika powinien być intuicyjny i przejrzysty.
@@ -105,7 +105,7 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 ---
 
-## 5. Wymagania bezpieczeństwa
+## 6. Wymagania bezpieczeństwa
 
 - Szyfrowanie transmisji danych (protokół HTTPS).
 - Szyfrowanie danych wrażliwych w bazie danych.
@@ -115,27 +115,27 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 ---
 
-## 6. Ograniczenia funkcjonalne systemu
+## 7. Ograniczenia funkcjonalne systemu
 
-### 6.1 Ograniczenia techniczne
+### 7.1 Ograniczenia techniczne
 
 - System jest uzależniony od poprawnego działania stacji pomiarowych i czujników IoT - w przypadku awarii urządzenia dane nie będą dostępne.
 - Częstotliwość aktualizacji danych zależy od konfiguracji czujników oraz przepustowości łącza internetowego.
 - System może obsługiwać jedynie czujniki zgodne z określonym protokołem komunikacyjnym (np. poprzez API REST lub MQTT).
 
-### 6.2 Ograniczenia danych
+### 7.2 Ograniczenia danych
 
 - Dokładność prezentowanych wyników zależy od jakości i kalibracji czujników.
 - System nie koryguje automatycznie błędnych danych pomiarowych - może jedynie je oznaczać jako potencjalnie nieprawidłowe.
 - Dane historyczne mogą być archiwizowane po określonym czasie, co może ograniczać dostęp do bardzo starych pomiarów w trybie online.
 
-### 6.3 Ograniczenia użytkowe
+### 7.3 Ograniczenia użytkowe
 
 - Użytkownik publiczny ma dostęp wyłącznie do danych odczytowych i statystyk - bez możliwości edycji lub ingerencji w dane źródłowe.
 - Administratorzy i operatorzy mają dostęp do funkcji zarządzania systemem wyłącznie w zakresie przypisanych ról.
 - System wymaga dostępu do Internetu - brak połączenia uniemożliwia korzystanie z platformy.
 
-### 6.4 Ograniczenia prawne i środowiskowe
+### 7.4 Ograniczenia prawne i środowiskowe
 
 - System musi działać zgodnie z obowiązującymi normami dotyczącymi ochrony danych osobowych (np. RODO).
 - Publikowane dane muszą być zgodne z aktualnymi normami jakości powietrza określonymi przez odpowiednie instytucje krajowe lub unijne.
@@ -143,7 +143,7 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 ---
 
-## 7. Dalsza ewolucja systemu
+## 8. Dalsza ewolucja systemu
 
 System będzie rozwijany i rozszerzany o nowe funkcjonalności, takie jak:
 
@@ -155,10 +155,10 @@ System będzie rozwijany i rozszerzany o nowe funkcjonalności, takie jak:
 
 ---
 
-## 8. Diagram przypadków użycia
+## 9. Diagram przypadków użycia
 
 ![Use Case Diagram](diagrams/use_case.png)
-## 9. Diagram aktywności
+## 10. Diagram aktywności
 ![Activity Diagram](diagrams/activity.png)
-## 10. Diagram klas
+## 11. Diagram klas
 ![Class Diagram](diagrams/class.png)
