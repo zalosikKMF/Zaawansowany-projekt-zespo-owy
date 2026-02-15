@@ -121,7 +121,6 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 
 - System jest uzależniony od poprawnego działania stacji pomiarowych i czujników IoT - w przypadku awarii urządzenia dane nie będą dostępne.
 - Częstotliwość aktualizacji danych zależy od konfiguracji czujników oraz przepustowości łącza internetowego.
-- System może obsługiwać jedynie czujniki zgodne z określonym protokołem komunikacyjnym (np. poprzez API REST lub MQTT).
 
 ### 7.2 Ograniczenia danych
 
