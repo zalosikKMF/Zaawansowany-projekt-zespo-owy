@@ -11,7 +11,7 @@ System będzie służył do gromadzenia, przetwarzania, analizowania oraz wizual
 Dane, jakie będą przetwarzane w systemie:
 
 - dane stacji pomiarowych (ID stacji, lokalizacja GPS, nazwa lokalizacji, status urządzenia),
-- dane czujników IoT (typ czujnika, np. PM2.5, PM10, NO₂, O₃, temperatura, wilgotność),
+- dane czujników IoT (typ czujnika, np. PM2.5, PM10, NO₂, temperatura, wilgotność),
 - dane pomiarowe (wartości pomiarów, data i godzina odczytu, jednostki miary),
 - dane statystyczne (średnie dobowe, tygodniowe, miesięczne),
 - dane alertów (przekroczenia norm jakości powietrza, czas trwania przekroczenia, poziom zagrożenia).
@@ -59,7 +59,7 @@ Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakośc
 ### Dla administratora systemu:
 
 - Dodawanie, edytowanie i usuwanie stacji pomiarowych oraz czujników.
-- Konfiguracja progów alarmowych dla poszczególnych parametrów (np. PM2.5).
+- Konfiguracja progów alarmowych dla poszczególnych parametrów (np. PM2.5, PM10).
 - Zarządzanie użytkownikami i nadawanie ról dostępu.
 - Generowanie raportów okresowych (dziennych, miesięcznych, rocznych).
 
