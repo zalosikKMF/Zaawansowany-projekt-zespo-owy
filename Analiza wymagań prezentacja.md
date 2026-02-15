@@ -16,7 +16,7 @@ Dane, jakie będą przetwarzane w systemie:
 - dane statystyczne (średnie dobowe, tygodniowe, miesięczne),
 - dane alertów (przekroczenia norm jakości powietrza, czas trwania przekroczenia, poziom zagrożenia).
 
-## 1.3 Cel wdrożenia systemu informatycznego
+## 1.3 Cel wdrożenia systemu
 
 Cel wdrożenia systemu polega na umożliwieniu bieżącego monitorowania jakości powietrza w wybranym obszarze, szybkiego reagowania na przekroczenia norm oraz udostępniania czytelnych danych mieszkańcom i instytucjom.
 
