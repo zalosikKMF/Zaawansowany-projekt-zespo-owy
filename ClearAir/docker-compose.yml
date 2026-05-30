@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: clearair-db
+    environment:
+      POSTGRES_USER: clearair
+      POSTGRES_PASSWORD: clearair
+      POSTGRES_DB: clearair
+    ports:
+      - "5432:5432"
+    volumes:
+      - clearair_pgdata:/var/lib/postgresql/data
+      - ./database/init-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U clearair -d clearair"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    container_name: clearair-backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://clearair:clearair@db:5432/clearair
+      SENSOR_COMMUNITY_URL: https://data.sensor.community
+      SYNC_COUNTRY: PL
+      SYNC_INTERVAL_MINUTES: 10
+      CORS_ORIGINS: http://localhost:5173,http://localhost:3000
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend
+    container_name: clearair-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  clearair_pgdata:
