@@ -1,6 +1,6 @@
 # ClearAir
 
-**System monitorowania jakosci powietrza** – platforma webowa wizualizujaca dane ze stacji czujnikow IoT (Sensor.Community) z mapa i statystykami dla Polski.
+**System monitorowania jakosci powietrza** - platforma webowa wizualizujaca dane ze stacji czujnikow IoT (Sensor.Community) z mapa i statystykami dla Polski.
 
 ## Funkcje
 
@@ -14,9 +14,9 @@
 
 | Warstwa | Technologia |
 |---------|-------------|
-| Frontend | React 18, TypeScript, Vite, Leaflet, Recharts |
+| Frontend | React 19.2, TypeScript, Vite, Leaflet, Recharts |
 | Backend | Python 3.12, FastAPI, SQLAlchemy, APScheduler |
-| Baza | PostgreSQL 16 |
+| Baza | PostgreSQL 17 |
 | Infrastruktura | Docker Compose |
 
 ## Uruchomienie (Docker)
@@ -28,7 +28,6 @@ docker compose up --build
 
 - Aplikacja: http://localhost:5173
 - API (Swagger): http://localhost:8000/docs
-- PostgreSQL: `localhost:5432` (user/haslo/db: `clearair`)
 
 Po pierwszym uruchomieniu backend automatycznie pobierze dane dla `country=PL`.
 
@@ -36,7 +35,7 @@ Po pierwszym uruchomieniu backend automatycznie pobierze dane dla `country=PL`.
 
 ### 1. PostgreSQL
 
-Utworz baze i uruchom skrypt `database/init-schema.sql` (lub pozwol backendowi utworzyc tabele przy starcie).
+Utworzenie bazy i uruchomienie skryptu `database/init-schema.sql` 
 
 ### 2. Backend
 
@@ -57,8 +56,8 @@ npm run dev
 
 ## Dokumentacja
 
-- [Dokumentacja projektowa](docs/DOKUMENTACJA_PROJEKTOWA.md)
-- [Dokumentacja techniczna](docs/DOKUMENTACJA_TECHNICZNA.md)
+- [Dokumentacja projektowa](docs/ClearAir_Dokumentacja_Techniczna.md)
+- [Dokumentacja techniczna](docs/ClearAir_Dokumentacja_Projektowa.md)
 
 ## API (skrot)
 
@@ -72,8 +71,8 @@ npm run dev
 
 ## Zrodlo danych
 
-Dane pochodza z sieci [Sensor.Community](https://sensor.community) (dawniej Luftdaten.info), projektu open-source. API: `https://data.sensor.community` – wymagany naglowek `User-Agent`.
+Dane pochodza z sieci [Sensor.Community](https://sensor.community) (dawniej Luftdaten.info), projektu open-source. API: `https://data.sensor.community`
 
 ## Licencja
 
-Projekt edukacyjny. Dane Sensor.Community – zgodnie z regulaminem projektu zrodlowego.
+Projekt edukacyjny. Dane Sensor.Community 
