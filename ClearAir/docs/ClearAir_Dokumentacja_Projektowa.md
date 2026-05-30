@@ -11,8 +11,8 @@ Projekt realizowany jest przez dedykowany, interdyscyplinarny zespół specjalis
 | Rola w projekcie | Imię i Nazwisko | Kluczowe Obowiązki |
 | :--- | :--- | :--- |
 | **Programista (Full-Stack)** | Mateusz Wawer | - Projektowanie struktury relacyjnej bazy danych PostgreSQL.<br>- Rozwój backendu (FastAPI, Python) oraz asynchronicznych zadań pobierania danych.<br>- Implementacja warstwy widoku w React.js.<br>- Konfiguracja środowiskowa Docker Compose. |
-| **Projektant UX/UI** | [Wpisz Imię i Nazwisko] | - Badanie potrzeb użytkowników i tworzenie makiet Hi-Fi (np. Figma).<br>- Dobór palety kolorystycznej (szczególnie mapowanie kolorów zanieczyszczeń na mapie z dbałością o dostępność/kontrast).<br>- Zaprojektowanie responsywności (RWD) panelu czujnika i statystyk. |
-| **Tester Systemu / QA** | [Wpisz Imię i Nazwisko] | - Opracowywanie scenariuszy testowych (Test Cases) i testy manualne.<br>- Wykonywanie testów wydajnościowych API i zapytań SQL.<br>- Weryfikacja poprawności danych na mapie względem źródłowego API Sensor.Community.<br>- Raportowanie i weryfikacja naprawianych błędów (Bug Tracking). |
+| **Projektant UX/UI** | Karol Wądołowski | - Badanie potrzeb użytkowników i tworzenie makiet Hi-Fi (np. Figma).<br>- Dobór palety kolorystycznej (szczególnie mapowanie kolorów zanieczyszczeń na mapie z dbałością o dostępność/kontrast).<br>- Zaprojektowanie responsywności (RWD) panelu czujnika i statystyk. |
+| **Tester Systemu / QA** | Piotr Saran | - Opracowywanie scenariuszy testowych (Test Cases) i testy manualne.<br>- Wykonywanie testów wydajnościowych API i zapytań SQL.<br>- Weryfikacja poprawności danych na mapie względem źródłowego API Sensor.Community.<br>- Raportowanie i weryfikacja naprawianych błędów (Bug Tracking). |
 
 ## 3. Wwymagania Systemu
 
