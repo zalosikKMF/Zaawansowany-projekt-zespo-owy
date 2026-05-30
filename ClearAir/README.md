@@ -10,7 +10,7 @@
 - Baza PostgreSQL z historia pomiarow
 - Automatyczna synchronizacja co 10 minut
 
-## Stos technologiczny
+##Technologie zastosowane
 
 | Warstwa | Technologia |
 |---------|-------------|
