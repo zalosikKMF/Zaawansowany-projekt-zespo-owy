@@ -1,46 +1,20 @@
 # ClearAir - Dokumentacja Techniczna
 
-Dokument jest zaawansowaną specyfikacją architektoniczną i techniczną systemu ClearAir. Zawiera szczegóły projektowe bazy danych, specyfikację komunikacji sieciowej (API) oraz wymagania wdrożeniowe. Przeznaczony jest dla deweloperów, inżynierów DevOps oraz administratorów systemu.
+Dokument jest zaawansowaną specyfikacją architektoniczną i techniczną systemu ClearAir. Zawiera szczegóły projektowe bazy danych, specyfikację komunikacji sieciowej (API) oraz wymagania wdrożeniowe. 
 
-## 1. Architektura Oprogramowania i Stos Technologiczny
+## 1. Architektura Oprogramowani
 Architektura ClearAir opiera się na wydzielonym zapleczu (backend API), warstwie persystencji danych oraz kliencie SPA (Single Page Application).
 
-| Technologia / Narzędzie | Wersja | Przeznaczenie i Uzasadnienie (Architektura) |
+| Technologia / Narzędzie | Wersja | Przeznaczenie i Uzasadnienie|
 | :--- | :--- | :--- |
-| **Python / FastAPI** | 3.12 / 0.115 | Fundament warstwy logicznej API. FastAPI wybrano z uwagi na natywne wsparcie zapytań asynchronicznych (asyncio), co znacząco zmniejsza czas oczekiwania (I/O bounds) przy pobieraniu dużych paczek z zewnętrznego API. |
-| **PostgreSQL + SQLAlchemy** | 16 / 2.0 (asyncpg) | Główny silnik bazy danych (DB Engine) do trwałego przechowywania modeli obiektowo-relacyjnych. Baza jest zoptymalizowana indeksami do zapytań o charakterze szeregów czasowych (Time-Series). |
-| **React.js + Vite** | 18 / 6 | Warstwa prezentacyjna. Reaktywność drzewa DOM pozwala na płynne działanie interfejsu (mapy) bez konieczności przeładowywania strony głównej. |
-| **Docker Compose** | V2+ | Orkiestrator lokalnych środowisk deweloperskich. Definiuje 3 współpracujące mikrousługi w izolowanych kontenerach sieciowych. |
+| **Python / FastAPI** | 3.12 | Obsługuje logikę aplikacji i komunikację z API. Dzięki pracy asynchronicznej szybciej pobiera dane z zewnętrznych źródeł. |
+| **PostgreSQL + SQLAlchemy** | 17.0| Przechowuje dane aplikacji. Dobrze radzi sobie z dużą ilością danych i historią zapisów w czasie. |
+| **React.js + Vite** | 19.2 | Odpowiada za wygląd i działanie strony internetowej. Umożliwia płynne aktualizowanie mapy i innych elementów bez odświeżania strony. |
+| **Docker Compose** | V2+ | Ułatwia uruchamianie całego projektu. Zarządza trzema współpracującymi usługami działającymi w oddzielnych kontenerach. |
 
-## 2. Struktura Repozytorium Kodu
-Projekt dzieli się na dwie główne aplikacje w architekturze monorepo:
+## 2. Specyfikacja Bazy Danych i Indeksowanie
 
-```text
-clearair_monorepo/
-├── backend/                  # Kontener Backendowy (Python)
-│   ├── app/
-│   │   ├── main.py           # Inicjalizacja instancji FastAPI i routing
-│   │   ├── models.py         # Tabele SQLAlchemy (Klasy ORM)
-│   │   ├── schemas.py        # Modele Pydantic (Walidacja Request/Response)
-│   │   ├── api/routes.py     # Kontrolery HTTP (Endpointy)
-│   │   └── services/         # Logika zewn: aq_sync.py (Pobieranie), aqi.py (Obliczenia)
-│   ├── requirements.txt
-│   └── Dockerfile
-├── frontend/                 # Kontener Frontendowy (React)
-│   ├── src/
-│   │   ├── components/       # MapLayer.jsx, SensorPanel.jsx
-│   │   ├── api_client.js     # Moduł axios do odpytywania backendu
-│   │   └── main.jsx
-│   ├── package.json
-│   └── Dockerfile
-├── database/                 # Skrypty DB
-│   └── init-schema.sql
-└── docker-compose.yml        # Konfiguracja środowiska
-```
-
-## 3. Specyfikacja Bazy Danych i Indeksowanie
-
-### 3.1 Schemat Tabel (DDL)
+### 2.1 Schemat Tabel (DDL)
 Architektura zakłada pełną relacyjność. Główne byty to: `locations` (współrzędne), `sensors` (urządzenia przypisane do miejsca), `measurements` (faktyczne dane liczbowe).
 
 ```sql
@@ -58,11 +32,11 @@ CREATE TABLE measurements (
 );
 ```
 
-### 3.2 Strategia Indeksów
+### 2.2 Strategia Indeksów
 * **Wydajność mapy (Latest Data):** Ponieważ mapa potrzebuje tylko *najnowszego* pomiaru dla 1500 czujników w jednej chwili, stworzono kompozytowy B-Tree index: `CREATE INDEX idx_sensor_time ON measurements (sensor_id, measured_at DESC);`
 * **Optymalizacja widoku:** Utworzono specjalny `VIEW v_latest_sensor_readings`, który wykonuje zaawansowany podział analityczny (WINDOW FUNCTION) typu `DISTINCT ON (sensor_id)` ułatwiający zrzut dla frontendu.
 
-## 4. Specyfikacja Interfejsu Programistycznego (REST API)
+## 3. Specyfikacja Interfejsu Programistycznego (REST API)
 Cała dokumentacja interaktywna (Swagger UI / OpenAPI) serwowana jest automatycznie pod adresem `http://{adres_serwera}:8000/docs`.
 
 | Metoda HTTP | Ścieżka (Endpoint) | Parametry Zapytań (Query/Path) | Zwracane dane (Opis) |
@@ -72,7 +46,7 @@ Cała dokumentacja interaktywna (Swagger UI / OpenAPI) serwowana jest automatycz
 | GET | `/api/map` | `?pm_only=true` (boolean) | Zwraca masywną listę z geo-lokalizacjami i wyliczonym kolorem hex AQI (do renderowania mapy). |
 | GET | `/api/sensors/{id}` | `id` (integer) - w ścieżce | Pobiera pełen model urządzenia oraz listę historycznych pomiarów (array timestampów i wartości float). |
 
-## 5. Skale AQI, Klasyfikacja Logiczna i Algorytmy
+## 4. Skale AQI, Klasyfikacja Logiczna i Algorytmy
 Dla jednolitej prezentacji wyników (Frontend/UI) zaimplementowano sztywną klasyfikację po stronie Backendowej, odciążając klienta. Stosowana jest uproszczona kategoria (bazowa podstawa UE) dla stężenia najgroźniejszego pyłu zawieszonego – PM2.5 (mikrogram/metr sześcienny).
 
 | Zakres (Stężenie PM2.5 µg/m³) | Zwracana flaga (Nazwa klucza) | Zwracany kod koloru (HEX) do styli mapy |
@@ -84,12 +58,12 @@ Dla jednolitej prezentacji wyników (Frontend/UI) zaimplementowano sztywną klas
 | > 50 AND <= 75 | zly | `#ef4444` (Red) |
 | > 75 | bardzo_zly | `#7f1d1d` (Dark Red) |
 
-## 6. Wdrażanie Systemu i Operacje Administracyjne (DevOps)
+## 5. Wdrażanie Systemu i Operacje Administracyjne (DevOps)
 
-### 6.1 Konfiguracja Zmiennych (Env)
+### 5.1 Konfiguracja Zmiennych (Env)
 Zaleca się umieszczenie pliku `.env` w głównym katalogu uruchomieniowym z kluczowymi hasłami bazodanowymi oraz parametryzacją: `SYNC_COUNTRY=PL` (zabezpieczenie obszaru pobierania), `SYNC_INTERVAL_MINUTES=10`, `DATABASE_URL`, itp.
 
-### 6.2 Proces Budowy Kontenerów
+### 5.2 Proces Budowy Kontenerów
 ```bash
 # Odtworzenie lub nowa budowa obrazów warstwowych bez używania cache:
 docker compose build --no-cache
