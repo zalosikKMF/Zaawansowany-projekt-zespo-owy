@@ -10,7 +10,7 @@ Architektura ClearAir opiera się na wydzielonym zapleczu (backend API), warstwi
 | **Python / FastAPI** | 3.12 | Obsługuje logikę aplikacji i komunikację z API. Dzięki pracy asynchronicznej szybciej pobiera dane z zewnętrznych źródeł. |
 | **PostgreSQL + SQLAlchemy** | 17.0| Przechowuje dane aplikacji. Dobrze radzi sobie z dużą ilością danych i historią zapisów w czasie. |
 | **React.js + Vite** | 19.2 | Odpowiada za wygląd i działanie strony internetowej. Umożliwia płynne aktualizowanie mapy i innych elementów bez odświeżania strony. |
-| **Docker Compose** | V2+ | Ułatwia uruchamianie całego projektu. Zarządza trzema współpracującymi usługami działającymi w oddzielnych kontenerach. |
+| **Docker Compose** | V2+ | Ułatwia uruchamianie całego projektu. Zarządza trzema współpracującymi usługami. |
 
 ## 2. Specyfikacja Bazy Danych i Indeksowanie
 
